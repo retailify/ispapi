@@ -27,7 +27,7 @@ setup(
     name='ispapi',
     version="0.0.1",
     description='Hexonet ISP API',
-    long_description=open(os.path.join(os.path.dirname(__file__), 'README.md')).read(),
+    long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     url='https://retailify.de/',
     license='BSD License',
     platforms=['OS Independent'],
