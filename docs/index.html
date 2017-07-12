@@ -1,0 +1,62 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>ISPAPI documentation for python</title>
+</head><body bgcolor="#f0f0f8">
+
+<p>
+<table width="100%" cellspacing="0" cellpadding="2" border="0" summary="section">
+<tbody>
+<tr bgcolor="#ff0059">
+<td valign="bottom" colspan="3">
+<br>
+<font face="helvetica, arial" color="#ffffff">
+<big>
+<strong>How&nbsp;to&nbsp;use&nbsp;the&nbsp;Library</strong>
+</big>
+</font>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ff0059">
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt>
+</td>
+<td> </td>
+<td width="100%">
+<dl><dd><tt>
+&nbsp;<br>
+#Import&nbsp;the&nbsp;ispapi&nbsp;library<br>
+<b>import&nbsp;ispapi</b><br>
+&nbsp;<br>
+#Create&nbsp;a&nbsp;connection&nbsp;with&nbsp;the&nbsp;URL,&nbsp;entity,&nbsp;login&nbsp;and&nbsp;password<br>
+#Use&nbsp;"1234"&nbsp;as&nbsp;entity&nbsp;for&nbsp;the&nbsp;OT&amp;E,&nbsp;and&nbsp;"54cd"&nbsp;for&nbsp;productive&nbsp;use<br>
+#Don't&nbsp;have&nbsp;a&nbsp;HEXONET&nbsp;Account&nbsp;yet?&nbsp;Get&nbsp;one&nbsp;here:&nbsp;<a target="_blank" href="http://www.hexonet.net/sign-up">www.hexonet.net/sign-up</a><br>
+<b>api&nbsp;=&nbsp;ispapi.connect(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;=&nbsp;'https://coreapi.1api.net/api/call.cgi',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entity&nbsp;=&nbsp;'1234',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;login&nbsp;=&nbsp;'test.user',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;password&nbsp;=&nbsp;'test.passw0rd'<br>
+)</b><br>
+&nbsp;<br>
+#Call&nbsp;a&nbsp;command<br>
+<b>response&nbsp;=&nbsp;api.call({<br>
+&nbsp;&nbsp;&nbsp;'Command':&nbsp;"QueryDomainList",&nbsp;'limit'&nbsp;:&nbsp;5<br>
+})</b><br>
+&nbsp;<br>
+#Display&nbsp;the&nbsp;result&nbsp;in&nbsp;the&nbsp;format&nbsp;you&nbsp;want<br>
+<b>$res&nbsp;=&nbsp;response.as_list()<br>
+$res&nbsp;=&nbsp;response.as_list_hash()<br>
+$res&nbsp;=&nbsp;response.as_hash()</b><br>
+&nbsp;<br>
+#Get&nbsp;the&nbsp;response&nbsp;code&nbsp;and&nbsp;the&nbsp;response&nbsp;description<br>
+<b>code&nbsp;=&nbsp;response.code()<br>
+description&nbsp;=&nbsp;response.description()</b></tt></dd></dl>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<a href="ispapi.html">Documentation</a>
+
+</body>
+</html>
